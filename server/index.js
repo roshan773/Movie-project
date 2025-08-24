@@ -14,8 +14,7 @@ app.use(cookieParser())
 const cors = require('cors');
 app.use(cors({
   origin: [
-    "http://localhost:5173",
-    "https://movie-project-w6i4.onrender.com/" 
+    "https://movie-project-w6i4.onrender.com/",
   ],
   credentials: true
 }));
