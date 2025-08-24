@@ -13,7 +13,10 @@ app.use(cookieParser())
 
 const cors = require('cors');
 app.use(cors({
-  origin: '*',
+  origin: [
+    "http://localhost:5173",
+    "https://movie-project-w6i4.onrender.com" // your deployed frontend
+  ],
   credentials: true
 }));
 
@@ -21,7 +24,7 @@ app.use(cors({
 app.get("/", (req, res) => {
   res.send("✅ API is running! Try /auth or /movie routes.");
 });
-app.use("/auth",userrouter);
+app.use("/auth", userrouter);
 app.use("/movie", movieRouter);
 
 
