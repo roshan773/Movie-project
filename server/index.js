@@ -15,7 +15,7 @@ const cors = require('cors');
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://movie-project-w6i4.onrender.com" // your deployed frontend
+    "https://movie-project-w6i4.onrender.com/" // your deployed frontend
   ],
   credentials: true
 }));
